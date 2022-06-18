@@ -13,19 +13,9 @@ body{
 	grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
 	/*grid-column-gap: 5px;*/
 }
-
-.primary-sidebar{
-	position: fixed;
-	/*overflow-x: scroll;*/
-	/*grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));*/
-	/*display: grid;*/
-	grid-row-start: 1;
-	grid-column-start: 1;
-	grid-column-end: 3;
-}
 .sidebar{
 	position: fixed;
-	/*overflow-x: scroll;*/
+	overflow-y: scroll;
 	display: grid;
 	/*grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));*/
 	grid-row-start: 1;
@@ -175,17 +165,21 @@ body{
 
 }
  @media only screen and (max-width: 1024px) {
- 	.container .sidebar{
- 		/*width: 500px;*/
- 		/*display: flex;*/
- 		/*flex-direction: column;*/
- 		/*position: absolute;*/
-
- 	}
+	
+ 	 .container{
+		/* display: grid; */
+		grid-template-columns: repeat(auto-fill, minmax(120px, 1fr))!important;
+		/* overflow: hidden; */
+		/* width: 76%; */
+	 }
  	.primary-sidebar{
  		position: fixed;
- 		height: 100vh;
+ 		height: 100vh;  
  	}
+	.primary-sidebar .sidebar{
+		overflow-y: scroll; 
+		width: 255px;
+	}
  	.sidebar #nav ul li a:last-child{
  		padding-bottom: 0;
  	}
@@ -223,13 +217,71 @@ body{
  		display: flex;
 
  	}
+	.main{
+		/* width: 76%!important; */
+	}
+	.main .home{
+		/* width: 76%; */
+		padding: 60px 0!important;
+	}
+	#about,.service,.resume,.portfolio,.testimonial,.contact,.footer{
+		width: 100%!important;
+	}
+	.about,.service,.resume,.portfolio,.testimonial,.contact,.footer{
+		width: 100%!important;
+	}
+	/* .main .home .text{
+		margin: 0 auto;
+		justify-content: center;
+		text-align: center;
+		justify-items: center;
+	}
+	 */
+	 .about .ab-history .row{
+		display: flex;
+		flex-direction: row;
+		padding: 30px 0!important;
+		/*position: absolute;*/
+	}
+	.about .ab-history .row .el-1,.el-2,.el-3,.el-4{
+		border-right: 1px solid #909294;
+		padding: 0 10px!important;
+		width: 100%;
+	}
+	.about .ab-history .row p{
+		text-align: center;
+	}
+	.resume .row{
+		padding: 0!important;
+	}
+	.service .row{
+		margin: 81px 0!important;
+	}
+	.portfolio .container3{
+		padding: 10px;
+	}
+	.portfolio .container3 .item1,.item2,.item3,.item4,.item5 img{
+		width: 100%!important;
+		margin-top: 0!important;
+	}
+	.portfolio .container3 .item5,.item6 img{
+		margin-top: -45px;
+	}
+	.portfolio .container3 .item6 img{
+		margin-top: -220px!important;
+	}
+	.testimonial .test-heading .test-bg{
+		font-size: 7rem;
+	}
+	.footer .copy{
+		padding: 50px 10px!important;
+	}
  		/*.bar{
         	visibility: visible;
         	display: flex;
         	display: inline-block;
         	float: right;
         }*/
-}
 }
 .cont-main .address ul li a:hover p{
 	visibility: visible;
@@ -246,10 +298,11 @@ body{
 	background-image: url(image/intro-bg.jpg);
 	width: 100%;
   	height: 100%;
-  	/*background-size: cover;*/
+  	/* background-size: cover; */
   	background-repeat: no-repeat;
-  	/*background-attachment: fixed;*/
+  	background-attachment: fixed;
   	background-position: center 0px;
+	/* background-size: auto; */
 
 }
 .main .home{
@@ -317,7 +370,7 @@ body{
 }
 
 @keyframes fade_move_down {
-  0%   { transform:translate(0,-10px); scale(0);  opacity: 0;  }
+  0%   { transform:translate(0,-10px); scale (0);  opacity: 0;  }
   50%  { opacity: 1; scale(0);  }
   100% { transform:translate(0,10px);scale(0);  opacity: 1; }
 }
@@ -327,10 +380,6 @@ body{
 	padding: 4.5rem 0;
 	overflow: hidden;
 	background-color: #1D2023;
-}
-.about .ab-heading {
-	/*height: 200px !important;*/
-	/*position: relative;*/
 }
 .about .ab-heading h2, .sv-heading h2, .re-heading h2, .port-heading h2, .test-heading h2, .cont-heading h2{
 	opacity: 0.1;
@@ -727,18 +776,15 @@ body{
 	padding: 40px;
 	margin: 0;
 	grid-template-areas: 
-	'left1 middle right1'
-	'left2 middle right2'
-	'left3 middle1 right3'
-
-}
-.container3 .item1{
-	
+		'left1 middle right1'
+		'left2 middle right2'
+		'left3 middle1 right3'
+		
 
 }
 .item1{
 	grid-area: left1;
-	position: absolute;
+	/* position: absolute; */
 }
 
 .container3 .hover-show{
@@ -754,7 +800,7 @@ body{
 }*/
 .container3 img{
 	/*position: relative;*/
-	width: 310px;
+	width: 100%;
 	border-radius: 5px;
 	/*background-color: rgba(0,0,0, 0.5);*/
 }
@@ -909,10 +955,6 @@ body{
 .address ul li a{
 	color: #adb5bd;
 	
-}
-
-.address ul li a i{
-
 }
 .cont-main .note{
 	flex: 1;
