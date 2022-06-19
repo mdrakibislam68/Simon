@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>Simone</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
@@ -14,8 +15,8 @@
 <body>
 	<div class="container">
 		<div id="bar">
-			<div style="width: 50%; float: left;">
-				<h3>Simone Olivia'</h3>
+			<div class="title">
+				<h3>Simone Olivia</h3>
 			</div>
 			<div class="bar-social" >
 				<ul class="nav-icon">
@@ -24,8 +25,21 @@
 					<li><a href="#"><p>Dribble</p><i class="fa-solid fa-basketball"></i></a></li>
 					<li><a href="#"><p>Github</p><i class="fa-brands fa-github"></i></a></li>
 				</ul>
-				<button class="btn" onclick="dddr()"><i class="fa-solid fa-bars"></i></button>
+				<div class="hamburger active" onclick="down()"><div class="bar"></div>
+					</div>
 			</div>
+			
+		</div>
+		<div id="drop-down" >
+			<ul>
+				<li><a href="#home" onclick="up()" class="navi active">Home</a></li>
+				<li><a href="#about" onclick="up()" class="navi">About Me</a></li>
+				<li><a href="#service" onclick="up()" class="navi">What I Do</a></li>
+				<li><a href="#resume" onclick="up()" class="navi">Resume</a></li>
+				<li><a href="#portfolio" onclick="up()" class="navi">Portfolio</a></li>
+				<li><a href="#testmonial" onclick="up()" class="navi">Testimonial</a></li>
+				<li style="border-bottom:none;"><a href="#contact" onclick="up()" class="navi">Contact</a></li>
+			</ul>
 		</div>
 		<div class="primary-sidebar">
 			<div class="sidebar">
@@ -73,7 +87,7 @@
 
 <!-- About Start -->
 					
-			<div class="about">
+			<div class="about" id="about">
 				<div class="ab-heading">
 					<h2 class="ab-bg">ABOUT ME</h2>
 					<h1>know<span class="bar"> Me </span> More</h1>
@@ -121,7 +135,7 @@
 
 	<!-- Service Start -->
 		
-			<div class="service" style="background-color: #343A40;">
+			<div class="service" id="service" style="background-color: #343A40;">
 				<div class="sv-heading">
 					<h2 class="sv-bg">SERVICES</h2>
 					<h1>What<span class="bar"> I </span> Do?</h1>
@@ -176,7 +190,7 @@
 	<!-- End Service -->
 	<!-- Start Resume -->
 		
-			<div class="resume">
+			<div class="resume" id="resume">
 				<div class="re-heading">
 					<h2 class="re-bg">SUMMERY</h2>
 					<h1>R<span class="bar">esum</span>e</h1>
@@ -297,18 +311,19 @@
 	<!-- Resume End -->
 	<!-- Portfolio Start -->
 	
-		<div class="portfolio" style="background-color: #343A40;">
+		<div class="portfolio" id="portfolio" style="background-color: #343A40;">
 			<div class="port-heading">
 					<h2 class="port-bg" style="color: rgba(255,255,255,0.5)!important">PORTFOLIO</h2>
 					<h1>M<span class="bar">y Wo</span>rk</h1>
 					
+					
 			</div>
 			<div class="nav" id="nav2">
 				<ul>
-					<li><a href="#" id="all" class="nav-item active2">All</a></li>
-					<li><a href="#" id="design" class="nav-item">Design</a></li>
-					<li><a href="#" id="brand" class="nav-item">Brand</a></li>
-					<li><a href="#" id="photo" class="nav-item">Photos</a></li>
+					<li><a id="all" class="nav-item active2">All</a></li>
+					<li><a id="design" class="nav-item">Design</a></li>
+					<li><a  id="brand" class="nav-item">Brand</a></li>
+					<li><a  id="photo" class="nav-item">Photos</a></li>
 				</ul>
 			</div>
 			<div class="container3" >
@@ -367,7 +382,7 @@
 	<!-- Portfolio End -->
 	<!-- Testimonial Start -->
 	
-		<div class="testimonial">
+		<div class="testimonial" id="testmonial">
 			<div class="test-heading">
 					<h2 class="test-bg">TESTIMONIAL</h2>
 					<h1>Clie<span class="bar">nt Sp</span>eak</h1>
@@ -423,7 +438,7 @@
 <!-- testimonial End -->
 <!-- Contact Start -->
 	
-		<div class="contact" style="background-color: #343A40;">
+		<div class="contact" id="contact" style="background-color: #343A40;">
 			<div class="cont-heading">
 					<h2 class="cont-bg">CONTACT</h2>
 					<h1>Get <span class="bar"> in To</span>uch</h1>
@@ -481,7 +496,7 @@
 		</div>
 	
 	
-		<div class="footer">
+		<div class="footer" id="footer">
 			<div class="copy">
 				<p>Copyright &copy; 2021 <span style="color: #20c997;">Simone.</span> All Rights Reserved.</p> 
 

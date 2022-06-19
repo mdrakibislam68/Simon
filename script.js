@@ -3,12 +3,21 @@ var li = header.getElementsByClassName("navi");
 
 for (var i = 0; i < li.length; i++) {
 	li[i].addEventListener("click", function () {
-		var current = document.getElementsByClassName("active");
-		current[0].className = current[0].className.replace("active");
+		var current = document.getElementsByClassName(" active");
+		current[0].className = current[0].className.replace(" active");
 		this.className += " active";
 	});
 }
+var header2 = document.getElementById("nav2");
+var ul = document.getElementsByClassName("nav-item");
 
+for (var i = 0; i < ul.length; i++) {
+	ul[i].addEventListener("click", function () {
+		var current = document.getElementsByClassName("active2");
+		current[0].className = current[0].className.replace("active2");
+		this.className += " active2";
+	});
+}
 
 // typing
 
@@ -103,13 +112,44 @@ for (var i = 0; i < ul.length; i++) {
 
 // Reaponsuve Bar 
 
-function dddr() {
-var responsive = document.getElementById("nav");
-if (responsive.style.display === "none") {
+function down() {
+var responsive = document.getElementById("drop-down");
+if (responsive.style.display == "none") {
 	responsive.style.display = "block";
 } else {
 	responsive.style.display = "none";
 }
 }
 
+function up() {
+	var responsive = document.getElementById("drop-down");
+	if(responsive.style.display == "none") {
+		responsive.style.display = "none"
+	}else{
+		responsive.style.display = "none"
+	}
+}
 
+
+
+
+
+
+const hamburger = document.querySelector( '.container #bar .bar-social .hamburger');
+const mobile_menu = document.querySelector('.container  .nav-list ul');
+const menu_item = document.querySelectorAll('.container #drop-down ul li a');
+const header5 = document.querySelector('.container');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    mobile_menu.classList.toggle('active');
+});
+
+document.addEventListener('scroll', () => { 
+	var scroll_position = window.scrollY;
+	if (scroll_position > 250) {
+		header.style.backgroundColor = '#29323c';
+	} else {
+		header.style.backgroundColor = 'transparent';
+	}
+});
