@@ -22,7 +22,7 @@ body{
 	grid-column-start: 1;
 	grid-column-end: 3;
 
-	width: 247px;
+	width: 260px;
 	height: 100vh;
 	background-color: #111418;
 }
@@ -55,7 +55,7 @@ body{
 	/*height: 100%;*/
 }
 .sidebar #nav ul{
-	padding:0 16px;
+	padding:16px;
 	margin: 0;
 }
 .sidebar #nav ul li{
@@ -136,9 +136,6 @@ body{
 	margin-left: -10px;
 	border-radius: 3px;
 	border-style: solid;
-	border-color: black transparent transparent transparent;
-	/*transition: all 0.5s;*/
-
 }
 .sidebar .socio-footer ul li a p::after,.cont-main .address ul li a p::after{
 	content: "";
@@ -161,7 +158,6 @@ body{
 }
 .bar-social{
 	visibility: hidden;
-	/* width: 5px; */
 	margin-right: 15px;
 
 }
@@ -173,6 +169,7 @@ body{
 		margin-top: 50px;
 		height: 50%;
 		overflow: scroll;
+		z-index: 9999;
 }
 #drop-down ul{
 	padding-left: 10px;
@@ -187,9 +184,15 @@ body{
 #drop-down li a{
 	text-decoration: none;
 	color: #fff;
+	width: 100%!important;
 }
 #drop-down li a:hover{
 	color: #18C397;
+}
+@media only screen and (max-width: 1200px){
+	.sidebar{
+		overflow-y: scroll!important;
+	}
 }
 
  @media only screen and (max-width: 1024px) {
@@ -204,7 +207,6 @@ body{
  	}
 	.primary-sidebar .sidebar{
 		overflow-y: scroll; 
-		width: 255px;
 	}
  	.sidebar #nav ul li a:last-child{
  		padding-bottom: 0;
@@ -235,12 +237,10 @@ body{
  	}
 	.main .home{
 		padding: 60px 0!important;
+		margin-left: -10px;
 	}
 	#about,.service,.resume,.portfolio,.testimonial,.contact,.footer{
-		width: 100%!important;
-	}
-	.about,.service,.resume,.portfolio,.testimonial,.contact,.footer{
-		width: 100%!important;
+		width: 100%;
 	}
 	
 	 .about .ab-history .row{
@@ -266,8 +266,8 @@ body{
 		padding: 10px;
 	}
 	.portfolio .container3 .item1,.item2,.item3,.item4,.item5 img{
-		width: 100%!important;
-		margin-top: 0!important;
+		width: 100%;
+		margin-top: 0;
 	}
 	.portfolio .container3 .item5,.item6 img{
 		margin-top: -45px;
@@ -297,27 +297,33 @@ body{
 		grid-column-start: 1!important;
 		grid-column-end: 12;
 	}
+	.main .home{
+		padding-top: 102px!important;
+	}
 	.main .home .text{
 		margin: 0 auto;
 		justify-content: center;
 		text-align: center;
 		justify-items: center;
 	}
-	
+	.main .home .text .typed-strings p{
+		font-size:calc(1.525rem + 3.3vw) !important ;
+	}
+	.main .home .text .address{
+		font-weight: 100!important;
+	}
 	#bar{
 		visibility: visible;
 		display: flex!important;
 		justify-content: space-between;
-		/* display: inline-block; */
-		/* float: right; */ 
 		position: fixed;
 		overflow: hidden;
+		z-index: 9999;
 	}
 	#bar .title{
 		margin-left: 15px;
 		font-family: inherit;
 		font-size: 1.1rem;
-		/* margin: 0; */
 	}
 	#bar .bar-social{
 		display: flex;
@@ -330,16 +336,12 @@ body{
 		justify-content: center;
 		text-align: center;
 		margin-bottom: 0;
-		/* display: block; */
 	}
 	#bar .bar-social .nav-icon ul{
 		justify-content: space-between;
 	}
 	#bar .bar-social .nav-icon li{
 		margin: 0 10px;
-
-		/* height: 5px; */
-		/* padding: 10px; */
 	}
 	#bar .bar-social .nav-icon li a{
 		color: #adb5bd;
@@ -356,21 +358,6 @@ body{
 	#bar .bar-social .nav-icon li a .fa-github:hover {
 		color: #332A22;
 	}
-	/* #bar .bar-social .btn{
-		width: 20px!important;
-		height: 30px;
-		margin-right: 20px;
-		margin-top: 13px;
-		background-color: #111418;
-		border: none;
-	}
-	#bar .bar-social .btn i{
-		width: 20px;
-		color: #fff;
-	}
-	#bar .bar-social .btn i .fa-bars{
-		width: 20px!important;
-	} */
 	#bar .hamburger{
 		height:45px ;
 		width: 45px;
@@ -391,8 +378,6 @@ body{
 		height: 100%;
 		width: 100%;
 		border-radius: 50%;
-		/* border: 3px solid white; */
-		/* animation: hamburger_puls 1s ease infinite; */
 	}
 	#bar .hamburger .bar{
 		height: 2px;
@@ -430,17 +415,18 @@ body{
 		transform: rotate(45deg);
 	}
 	.about, .service, .resume, .portfolio, .testimonial, .contact{
-		/* width: 100%; */
 		padding-top: 35px !important;
 		overflow: hidden;
 		background-color: #1D2023;
 	}
 	.about .ab-heading h2, .sv-heading h2, .re-heading h2, .port-heading h2, .test-heading h2, .cont-heading h2{
 		opacity: 0.1;
-		font-size: 6rem;
-		/* line-height: 1!important; */
-		font-weight: 800;
-		
+		font-size: 5rem!important;
+		font-family: inherit!important;
+		font-weight: 800!important;
+		width: 100%;
+		letter-spacing: 0.7rem;
+
 	}
 	.about .ab-heading h1, .sv-heading h1, .re-heading h1, .port-heading h1, .test-heading h1, .cont-heading h1{
 		color: #fff;
@@ -449,15 +435,15 @@ body{
 		margin: 0;
 		font-size: 2.25rem;
 		font-weight: 600;
-		margin-top: -90px !important;
+		margin-top: -80px !important;
 		margin-bottom: 50px;
-		/* position: absolute; */
 	}
 	.about .ab-main{
 		display: block!important;
 	}
 	.about .ab-main .desc{
 		text-align: center;
+		margin: 0 40px;
 	}
 	.about .ab-cv{
 		width: 100%!important;
@@ -466,10 +452,33 @@ body{
 	.about .ab-cv ul li{
 		width: 100%!important;
 	}
+	.about .ab-history .row{
+		display: grid!important;
+		grid-template-areas: 
+			'his1 his2'
+			'his3 his4';
+	}
+	.about .ab-history .row h4{
+		font-size: 2rem!important;
+	}
+	.about .ab-history .row .el-1,.el-2{
+		margin-bottom: 10px;
+		
+	}
+	.about .ab-history .row .el-1{
+		grid-area: his1;
+	}
+	.about .ab-history .row .el-2{
+		grid-area: his2;
+	}
+	.about .ab-history .row .el-3{
+		grid-area: his3;
+	}
+	.about .ab-history .row .el-4{
+		grid-area: his4;
+	}
 	.container3{
-		/*width: 100%;*/
 		overflow: hidden;
-		/*position: absolute;*/
 		display: grid;
 		padding: 40px;
 		margin: 0;
@@ -502,25 +511,20 @@ body{
 }
 @media only screen and (max-width: 480px) {
 	.main .home .text p{
-		font-size: 1rem;
-		font-weight: 300;
+		font-size: 0.5rem;
+		font-weight: 300!important;
+		font-family: inherit;
 	}
-	.main .home .typed-strings p{
+	.main .home .text .typed-strings p{
 		color: #fff;
-		font-size: 2.7rem;
+		font-size: 2.2rem;
 	}
 	.about .ab-heading h2, .sv-heading h2, .re-heading h2, .port-heading h2, .test-heading h2, .cont-heading h2{
 		font-size: 5rem!important;
-
-		
-	}
-	.about .ab-heading h1, .sv-heading h1, .re-heading h1, .port-heading h1, .test-heading h1, .cont-heading h1{
-
 	}
 }
 .cont-main .address ul li a:hover p{
 	visibility: visible;
-
 }
 .sidebar .socio-footer ul li a:hover p{
 	visibility: visible;
@@ -537,13 +541,11 @@ body{
   	background-repeat: no-repeat;
   	background-attachment: fixed;
   	background-position: center 0px;
-	/* background-size: auto; */
 
 }
 .main .home{
 	background-color: rgba(17, 20, 24, 0.8);
 	height: 100%;
-	/*width: 100%;*/
 	padding: 72px;
 }
 .main .home .text{
@@ -594,7 +596,6 @@ body{
     margin: 0;
 }
 .main .home .scroll-down a{
-	/*position: absolute;*/
 	justify-content: center;
 	text-align: center;
 	display: block;
@@ -624,7 +625,6 @@ body{
 	justify-content: center;
 	text-align: center;
 	color: #6c757d!important;
-	/*width: 100%;*/
 	margin: 0;
 }
 .about .ab-heading h1, .sv-heading h1, .re-heading h1, .port-heading h1, .test-heading h1, .cont-heading h1{
@@ -645,7 +645,7 @@ body{
 	display: flex;
 }
 .about .desc{
-	padding: 48px 30px;
+	padding: 48px 48px;
 	justify-content: center;
 	text-align: left;
 
@@ -686,12 +686,10 @@ body{
 
 }
 .about .ab-main .ab-cv .ab-bt, #send-btn{
-	/*box-shadow: 0 15px 15px;*/
 	padding: 0.8rem 2.6rem;
 	background-color: #20c997;
 	border-color: #20c997;
 	border-radius: 50rem;
-	/*border-width: 2px;*/
 	border: none;
 	margin-top: 20px;
 }
@@ -710,7 +708,6 @@ body{
 	display: flex;
 	flex-direction: row;
 	padding: 30px;
-	/*position: absolute;*/
 }
 .about .ab-history .row .el-1,.el-2,.el-3,.el-4{
 	border-right: 1px solid #909294;
@@ -726,6 +723,7 @@ body{
 .about .ab-history .row .el-1 p, .el-2 p, .el-3 p, .el-4 p{
 	color: #CCE3E4;
 	margin: 0;
+	text-align: center;
 }
 .about .ab-history .row .el-2 p{
 	color: #CCE3E4;
@@ -817,14 +815,15 @@ body{
 }
 .resume .row .education .col-1 .vr, .col-2 .vr, .col-3 .vr{
 	margin: 0;
-	color: #16BD97;
+	background-color: #16BD97;
 }
-.resume .row .education .col-1 p, .col-2 p, .col-3 p{
-	color: #88898B;
+.resume .row .education .col-1,.col-2,.col-3,.col-4,.col-5,.col-6 span{
+	color: #18C397;
 }
-
-/* Education(skill*/
-/*skill*/
+.resume .row .education p{
+	color: rgba(255,255,255,.5)!important;
+	margin: 5px 0;
+}
 .resume .row .education .skill-1, .skill-2{
 	list-style: none;
 }
@@ -860,7 +859,6 @@ body{
 	border-radius: 5px;
 	overflow: hidden;
 	margin-bottom: 24px;
-	/*position: absolute;*/
 }
 .resume .row .education .skill-1 .bar span, .skill-2 .bar span{
 	height: 8px;
@@ -935,7 +933,6 @@ body{
 		width: 99%;
 	}
 }
-/*Education End*/
 
 
 
@@ -972,16 +969,11 @@ body{
 	color: #88898B;
 }
 
-/*Resume End*/
-
-/*Portfolio*/
-
 .portfolio .port-heading{
 	margin-bottom: 68px;
 }
 .portfolio .nav ul{
 	display: flex;
-	/*justify-content: space-between;*/
 	justify-content: center;
 }
 .portfolio .nav li{
@@ -999,14 +991,10 @@ body{
 .portfolio .nav a{
 	color: #ddd;
 	text-decoration: none;
-	/*margin-bottom: 10px;*/
-	/*border-bottom: 2px solid #20c997;*/
 	padding: 10px 16px;
 }
 .container3{
-	/*width: 100%;*/
 	overflow: hidden;
-	/*position: absolute;*/
 	display: grid;
 	padding: 40px;
 	margin: 0;
@@ -1020,7 +1008,6 @@ body{
 }
 .item1{
 	grid-area: left1;
-	/* position: absolute; */
 }
 
 .container3 .hover-show{
@@ -1030,19 +1017,12 @@ body{
 	margin: 0 auto;
 	visibility: hidden;
 }
-/*.container3 span{
-	display: block;
-	position: absolute;
-}*/
 .container3 img{
-	/*position: relative;*/
 	width: 100%;
 	border-radius: 5px;
-	/*background-color: rgba(0,0,0, 0.5);*/
 }
 .container3 a:hover{
 	opacity: 0.7;
-	/*background-color: rgba(0,0,0,0.7);*/
 	transition: all 0.5s ease-in-out;
 	filter: blur(1px);
 	visibility: visible;
@@ -1077,7 +1057,6 @@ body{
 }
 .review .head{
 	display: flex;
-	/*padding: 30px;*/
 	margin-bottom: 30px;
 }
 .review-1{
@@ -1109,7 +1088,6 @@ body{
 .testimonial .btn{
 	display: flex;
 	justify-content: center;
-	/*margin: 25px;*/
 	column-gap: 7px;
 }
 .testimonial .btn .role-btn{
@@ -1122,8 +1100,6 @@ body{
     border: none;
     border-radius: 50%;
     margin: 10px;
-    /*position: absolute;*/
-    /*box-shadow: 1px 0px 10px #20c997;*/
 }
 .testimonial .btn .role-btn span{
 	visibility: hidden;
@@ -1144,16 +1120,12 @@ body{
 }
 .testimonial .btn  .role-btn:hover{
 	background-color: #20C997;
-	/*visibility: hidden;*/
 }
 .cont-main {
 	display: flex;
 	justify-content: space-between;
 	padding: 0 48px;
 	column-gap: 40px;
-	/*width: 300px;*/
-	/*margin-top: 48px;*/
-	/*align-items: center;*/
 }
 .cont-main h4{
 	color: #fff;
@@ -1169,7 +1141,6 @@ body{
 .cont-main p{
 	margin: 0 0 4px 0;
 	font-size: 1rem;
-	/*width: 100%;*/
 }
 .address, .note{
 	padding: 0 20px;
@@ -1229,10 +1200,7 @@ body{
 }
 .cont-main .note button{
 	margin: 0 auto;
-	/*justify-content: center;*/
-	/*text-align: center;*/
 	display: flex;
-	/*flex: middle;*/
 }
 .cont-main .note #send-btn:hover{
 	background-color: #1BAA80;
