@@ -1295,6 +1295,9 @@ body{
 	.portfolio .item6 img{
 		margin-top: 0!important;
 	}
+	.portfolio .item7 img{
+		margin-top: -90px;
+	}
 	.contact .cont-main{
 		padding: 0 25px;
 	}
