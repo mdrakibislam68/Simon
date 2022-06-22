@@ -327,56 +327,56 @@
 			</div>
 			<div class="nav" id="nav2">
 				<ul>
-					<li><a id="all" class="nav-item active2">All</a></li>
-					<li><a id="design" class="nav-item">Design</a></li>
-					<li><a  id="brand" class="nav-item">Brand</a></li>
-					<li><a  id="photo" class="nav-item">Photos</a></li>
+					<li><a class="nav-item active2" onclick="filterSelection('all')" >All</a></li>
+					<li><a class="nav-item" onclick="filterSelection('design')">Design</a></li>
+					<li><a   class="nav-item" onclick="filterSelection('brand')">Brand</a></li>
+					<li><a class="nav-item" onclick="filterSelection('photo')">Photos</a></li>
 				</ul>
 			</div>
 			<div class="container3" >
-				<div class="item1" >
+				<div class="item1 filterDiv design brand"  >
 					<div class="hover-show">
 						<h4 ><a href="">Project Title</a></h4>
 						<span>Category</span>
 					</div>
 					<a href=""><img src="image/1.jpg" ></a>
 				</div>
-				<div class="item2"  >
+				<div class="item2 filterDiv photo"  >
 					<div class="hover-show">
 						<h4><a href="">Project Title</a></h4>
 						<span>Category</span>
 					</div>
 					<a href=""><img src="image/2.jpg"></a>
 				</div>
-				<div class="item3" >
+				<div class="item3 filterDiv brand">
 					<div class="hover-show">
 						<h4><a href="">Project Title</a></h4>
 						<span>Category</span>
 					</div>
 					<a href=""><img src="image/3.jpg"></a>
 				</div>
-				<div class="item4" >
+				<div class="item4 filterDiv photo" >
 					<div class="hover-show">
 						<h4><a href="">Project Title</a></h4>
 						<span>Category</span>
 					</div>
 					<a href=""><img src="image/4.jpg" ></a>
 				</div>
-				<div class="item5" >
+				<div class="item5 filterDiv">
 					<div class="hover-show">
 						<h4><a href="">Project Title</a></h4>
 						<span>Category</span>
 					</div>
 					<a href=""><img src="image/5.jpg" ></a>
 				</div>
-				<div class="item6" >
+				<div class="item6 filterDiv" >
 					<div class="hover-show">
 						<h4><a href="">Project Title</a></h4>
 						<span>Category</span>
 					</div>
 					<a href=""><img src="image/6.jpg" ></a>
 				</div>
-				<div class="item7" >
+				<div class="item7 filterDiv">
 					<div class="hover-show">
 						<h4><a href="">Project Title</a></h4>
 						<span>Category</span>
@@ -559,6 +559,7 @@
 		</div>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>	
+	<!-- <script src="filter.js"></script> -->
 	<script src="slider.js"></script>
 	<script type="text/javascript" src="nav.js"></script>
 <script type="text/javascript" src="script.js"></script>
