@@ -186,10 +186,12 @@ body{
 	color: #fff;
 	width: 100%;
 }
-#drop-down li a:hover{
+#drop-down li.active, a:hover{
 	color: #18C397;
 }
-
+/* .active{
+	color: #18C397;
+} */
 .cont-main .address ul li a:hover p{
 	visibility: visible;
 }
@@ -496,7 +498,7 @@ body{
 	list-style: none;
 	display: flex;
 	width: 100%;
-	padding: 40px;
+	padding: 27px;
 	/* margin:0 20px; */
 }
 .resume .skill h3{
@@ -699,7 +701,7 @@ body{
 	grid-area: left1;
 }
 .portfolio .container3 .item6 img{
-	margin-top: -90px;
+	margin-top: -13px;
 }
 .container3 .hover-show{
 	position: absolute;
@@ -711,6 +713,7 @@ body{
 .container3 img{
 	width: 100%;
 	border-radius: 5px;
+	height: 95%;
 }
 .container3 a:hover{
 	opacity: 0.7;
@@ -901,9 +904,9 @@ body{
 }
 .cont-main .note .textarea textarea{
 	height: 100px;
-	width: 100%;
+	width: 95%;
 	color: #fff;
-	padding: 15px;
+	/* padding: 15px; */
 	font-size:16px;
 	font-weight: 400;
 	border: none;
@@ -1306,7 +1309,7 @@ body{
 		grid-template-areas: 
 			'left1 middle'
 			'left2 middle'
-			'left3 middle1'
+			'right1 middle1'
 			'right1 middle1'
 			'right3 right2'
 			'right3 right2';
@@ -1321,7 +1324,7 @@ body{
 		margin-top: 0!important;
 	}
 	.portfolio .item7 img{
-		margin-top: -90px;
+		margin-top: -23px;
 	}
 	.contact .cont-main{
 		padding: 0 25px;
@@ -1419,6 +1422,9 @@ body{
 	.portfolio .container3{
 		display: flex;
 		flex-direction: column;
+	}
+	.portfolio .item7 img{
+		margin-top: 0;
 	}
 	.review{
 		padding: 10px;
