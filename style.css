@@ -212,7 +212,7 @@ body{
   	background-attachment: fixed;
   	background-position: center 0px;
 	margin-left: 260px;
-	overflow: scroll;
+	/* overflow: scroll; */
 
 }
 .main .home{
