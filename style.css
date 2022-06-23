@@ -1061,7 +1061,7 @@ body{
  		height: 100vh;  
  	}
 	.primary-sidebar .sidebar{
-		overflow-y: scroll; 
+		overflow-y: hidden; 
 	}
  	.sidebar #nav ul li a:last-child{
  		padding-bottom: 0;
@@ -1149,6 +1149,8 @@ body{
 	}
 	.sidebar{
 		display: block;
+		overflow: scroll;
+		height: 100vh;
 	}
 	.main{
 		display: grid;
