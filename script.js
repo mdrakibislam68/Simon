@@ -1,13 +1,13 @@
-var header = document.getElementById("nav");
-var li = header.getElementsByClassName("navi");
+// var header = document.getElementById("nav");
+// var li = header.getElementsByClassName("navi");
 
-for (var i = 0; i < li.length; i++) {
-	li[i].addEventListener("click", function () {
-		var current = document.getElementsByClassName("active");
-		current[0].className = current[0].className.replace("active");
-		this.className += " active";
-	});
-}
+// for (var i = 0; i < li.length; i++) {
+// 	li[i].addEventListener("click", function () {
+// 		var current = document.getElementsByClassName("active");
+// 		current[0].className = current[0].className.replace("active");
+// 		this.className += " active";
+// 	});
+// }
 var header2 = document.getElementById("nav2");
 var ul = document.getElementsByClassName("nav-item");
 
