@@ -4,18 +4,19 @@ html{
 body{
 	margin: 0;
 	padding: 0;
-
+	width: 100%;
 }
 .container{
 	font-family: 'Poppins', sans-serif;
 	width: 100%;
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+	overflow: hidden;
+	/* display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); */
 	/*grid-column-gap: 5px;*/
 }
 .sidebar{
 	position: fixed;
-	/* overflow-y: scroll; */
+	overflow-y: scroll;
 	display: grid;
 	/*grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));*/
 	grid-row-start: 1;
@@ -23,7 +24,7 @@ body{
 	grid-column-end: 3;
 
 	width: 260px;
-	height: 100vh;
+	height: 100%;
 	background-color: #111418;
 }
 .sidebar .logo{
@@ -49,7 +50,7 @@ body{
 	color: #fff;
 }
 .sidebar #nav{
-	margin: 0 auto;
+	margin: 210px 0;
 	justify-content: center;
 	text-align: center;
 	/*height: 100%;*/
@@ -204,12 +205,14 @@ body{
 	grid-column-start: 3;
 	grid-column-end: 12;
 	background-image: url(image/intro-bg.jpg);
-	width: 100%;
+	/* width: 100%; */
   	height: 100%;
   	background-size: cover;
   	background-repeat: no-repeat;
   	background-attachment: fixed;
   	background-position: center 0px;
+	margin-left: 260px;
+	overflow: scroll;
 
 }
 .main .home{
@@ -218,7 +221,7 @@ body{
 	padding: 72px;
 }
 .main .home .text{
-	margin: 81px 0;
+	margin: 291px 0;
 	justify-content: center;
 	text-align: center;
 }
@@ -285,6 +288,9 @@ body{
 	padding: 4.5rem 0;
 	overflow: hidden;
 	background-color: #1D2023;
+}
+.about .ab-row{
+	margin: 0 22%;
 }
 .about .ab-heading h2, .sv-heading h2, .re-heading h2, .port-heading h2, .test-heading h2, .cont-heading h2{
 	opacity: 0.1;
@@ -401,6 +407,10 @@ body{
 .service{
 	padding-bottom: 20px;
 	background-color:#343A40;
+	width: 100%;
+}
+.service .service-row{
+	margin:0 22%;
 }
 .service .row{
 	display: flex;
@@ -446,6 +456,9 @@ body{
 	padding-left: 90px;
 	color: rgba(255,255,255,.5);
 	line-height: 1.8;
+}
+.resume .resume-row{
+	margin: 0 22%;
 }
 .resume .row{
 	padding: 0 25px;
@@ -657,6 +670,9 @@ body{
 .portfolio{
 	background-color: #343A40;	
 }
+.portfolio .portfolio-row{
+	margin: 0 22%;
+}
 .portfolio .port-heading{
 	margin-bottom: 68px;
 }
@@ -758,6 +774,9 @@ body{
 	display: flex;
 	padding: 50px;
 }
+.testimonial .testimonial-row{
+	margin: 0 22%;
+}
 .review .head{
 	display: flex;
 	margin-bottom: 30px;
@@ -857,6 +876,9 @@ body{
 	0%{left: 20%;}
     100% { left: 0; }
 } */
+.contact .contact-row{
+	margin: 0 22%;
+}
 .cont-main {
 	display: flex;
 	justify-content: space-between;
@@ -943,13 +965,21 @@ body{
 }
 .footer {
 	height: 130px;
-	display: flex;
-	justify-content: space-between;
+	/* display: flex; */
+	/* justify-content: space-between; */
 	background-color: #232a31;
 	align-items: center;
 }
+.footer .footer-row{
+	margin: 0 22%;
+	display: flex;
+	justify-content: space-around;
+}
+.footer .footer-row .term{
+	display: flex;
+}
 .footer .copy,.term{
-	padding: 50px;
+	padding: 35px 0;
 }
 .term ul{
 	padding: 0;
@@ -970,9 +1000,45 @@ body{
 
 
 
-@media only screen and (max-width: 1200px){
+@media only screen and (max-width: 1500px){
 	.sidebar{
 		overflow-y: scroll;
+	}
+	.sidebar #nav{
+		margin: 0px 0;
+	}
+	.main .home .text{
+		margin: 50px 0;
+	}
+	.about .ab-row{
+		margin: 0 10px!important;
+	}
+	.service .service-row{
+		margin: 0 10px;
+	}
+	.resume .resume-row{
+		margin: 0 10px;
+	}
+	.portfolio .portfolio-row{
+		margin: 0 10px;
+	}
+	.testimonial .testimonial-row{
+		margin: 0 10px;
+	}
+	.contact .contact-row{
+		margin: 0 10px;
+	}
+	.footer .footer-row{
+		margin: 0 10px;
+	}
+}
+@media only screen and (max-width: 1440px){
+	.sidebar{
+		overflow-y: hidden;
+		height: 100vh;
+	}
+	.sidebar #nav{
+		/* margin: 30px 0; */
 	}
 }
 
@@ -1080,6 +1146,7 @@ body{
 		display: grid;
 		grid-column-start: 1;
 		grid-column-end: 12;
+		margin-left: 0;
 	}
 	.main .home{
 		padding-top: 102px;
