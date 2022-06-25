@@ -90,6 +90,7 @@ body{
 	margin: 0;
 	padding: 0;
 	transition: .3s;
+	margin-bottom: 15px;
 }
 .sidebar .socio-footer ul{
 	display: flex;
@@ -267,6 +268,20 @@ body{
     font-size: 4rem;
     margin: 0;
 }
+.main .home .typed-strings .cursor{
+	display: inline-block;
+	width: 2px;
+	height: 40px;
+	background-color: #fff;
+	margin-left: 8px;
+	animation: blink .6s linear infinite alternate;
+}
+@keyframes blink {
+	0% {opacity: 1;}
+	40% {opacity: 1;}
+	60% {opacity: 0;}
+	100% {opacity: 0;}
+}
 .main .home .scroll-down a{
 	justify-content: center;
 	text-align: center;
@@ -283,14 +298,17 @@ body{
   100% { transform:translate(0,10px);scale(0);  opacity: 1; }
 }
 
-.about, .service, .resume, .testimonial, .contact{
+.about, .service, .resume,.portfolio, .testimonial, .contact{
 	width: 100%;
 	padding: 4.5rem 0;
 	overflow: hidden;
 	background-color: #1D2023;
 }
-.about .ab-row{
-	margin: 0 22%;
+.about .ab-row {
+    /* margin: 0 22%; */
+    max-width: 1000px;
+    justify-content: center;
+    margin: 0 auto;
 }
 .about .ab-heading h2, .sv-heading h2, .re-heading h2, .port-heading h2, .test-heading h2, .cont-heading h2{
 	opacity: 0.1;
@@ -405,27 +423,29 @@ body{
 	margin: 0;
 }
 .service{
-	padding-bottom: 20px;
+	/* padding-bottom: 20px; */
 	background-color:#343A40;
 	width: 100%;
 }
 .service .service-row{
-	margin:0 22%;
+	margin:0 auto;
 }
 .service .row{
 	display: flex;
-	flex-wrap: wrap;
+	/* flex-wrap: wrap; */
 	margin: 81px;
 	padding: 12px;
 	padding-bottom: 0;
 	margin-bottom: 0;
+	justify-content: center;
 }
 .service .row div{
-	flex: 50%;
+	/* flex: 50%; */
 
 }
 .service .row .sv-1, .sv-2, .sv-3, .sv-4, .sv-5, .sv-6{
 	margin-bottom: 3rem;
+	/* max-width: 500px; */
 }
 .service .row .sv-1 .icon, .sv-2 .icon, .sv-3 .icon, .sv-4 .icon, .sv-5 .icon, .sv-6 .icon{
 	color: #20C997;
@@ -456,9 +476,12 @@ body{
 	padding-left: 90px;
 	color: rgba(255,255,255,.5);
 	line-height: 1.8;
+	margin-right: 50px;
 }
 .resume .resume-row{
-	margin: 0 22%;
+	/* margin: 0 22%; */
+	max-width: 1200px;
+	margin: 0 auto;
 }
 .resume .row{
 	padding: 0 25px;
@@ -671,7 +694,9 @@ body{
 	background-color: #343A40;	
 }
 .portfolio .portfolio-row{
-	margin: 0 22%;
+	/* margin: 0 22%; */
+	max-width: 1200px;
+	margin: 0 auto;
 }
 .portfolio .port-heading{
 	margin-bottom: 68px;
@@ -694,6 +719,9 @@ body{
 	color: #20c997;
 
 
+}
+.portfolio .nav li .active2:hover .container3{
+	display: none;
 }
 .portfolio .nav a{
 	color: #ddd;
@@ -775,7 +803,9 @@ body{
 	padding: 50px;
 }
 .testimonial .testimonial-row{
-	margin: 0 22%;
+	/* margin: 0 22%; */
+	max-width: 1200px;
+	margin: 0 auto;
 }
 .review .head{
 	display: flex;
@@ -794,6 +824,7 @@ body{
 	margin: 7px 0;
 	padding: 0px;
 	color: #dee3e4;
+	font-size: 0.7rem;
 }
 .review-1{
 	margin-left: 15px;
@@ -877,7 +908,9 @@ body{
     100% { left: 0; }
 } */
 .contact .contact-row{
-	margin: 0 22%;
+	/* margin: 0 22%; */
+	max-width: 1200px;
+	margin: 0 auto;
 }
 .cont-main {
 	display: flex;
@@ -964,7 +997,7 @@ body{
 	background-color: #1BAA80;
 }
 .footer {
-	height: 130px;
+	height: 50px;
 	/* display: flex; */
 	/* justify-content: space-between; */
 	background-color: #232a31;
@@ -979,12 +1012,14 @@ body{
 	display: flex;
 }
 .footer .copy,.term{
-	padding: 35px 0;
+	padding: 7px 0;
 }
 .term ul{
 	padding: 0;
 	margin: 0;
 	justify-content: center;
+	align-items: center;
+	font-size: 0.7rem;
 }
 .term ul li {
 	list-style: none;
@@ -1013,8 +1048,14 @@ body{
 	.about .ab-row{
 		margin: 0 10px!important;
 	}
-	.service .service-row{
+	.service-row{
 		margin: 0 10px;
+		display: flex;
+		flex-direction: column;
+	}
+	.service .row .sv-1, .sv-2, .sv-3, .sv-4, .sv-5, .sv-6{
+		margin-bottom: 3rem;
+		/* max-width: 50%; */
 	}
 	.resume .resume-row{
 		margin: 0 10px;
@@ -1032,9 +1073,9 @@ body{
 		margin: 0 10px;
 	}
 }
-@media only screen and (max-width: 1440px){
+@media screen and (max-width: 1440px){
 	.sidebar{
-		overflow-y: hidden;
+		overflow-y: scroll;
 		height: 100vh;
 	}
 	
@@ -1047,6 +1088,11 @@ body{
 	}
 	.sidebar #nav{
 		/* margin: 30px 0; */
+	}
+	.service-row{
+		/* margin: 0 10px; */
+		display: flex;
+		flex-direction: column;
 	}
 }
 
@@ -1116,6 +1162,8 @@ body{
 	}
 	.service .row{
 		margin: 81px 0;
+		display: flex;
+		flex-direction: column;
 	}
 	.portfolio .container3{
 		padding: 10px;
@@ -1556,6 +1604,27 @@ body{
 	}
 	.footer .term{
 		padding: 0;
-		margin-top: 15px;
+		/* margin-top: 15px; */
 	}
 }
+
+
+
+::-webkit-scrollbar {
+	width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+	background: #111418; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	background: #555; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background: #555; 
+  }

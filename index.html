@@ -75,8 +75,14 @@
 			<div class="home" id="home">
 				<div class="text">
 					<h1 id="wel"> Welcome</h1>
-					<div class="typed-strings">
-		                  <p>I'm <span class="auto-type"> </span></p>
+					
+					<div class="typed-strings" >
+						<p>I'm 
+							<span
+							   class="txt-rotate"
+							   data-period="2000"
+							   data-rotate='["Simon Olivia", "a Freelancer,", "a Photographar,", "a Designer" ]'></span>
+						</p>
 	                </div>
 	                <p class="address">based in Los Angeles, California.</p>
 	                <button id="hire-me">Hire Me</button>
@@ -125,7 +131,7 @@
 							<p>Projects Done</p>
 						</div>	
 						<div class="el-4" style="border-right: none;">
-							<h4><span id="counter-4">38</span></h4>
+							<h4><span id="counter-4">38</span>+</h4>
 							<p>Get Awards</p>
 						</div>
 					</div>
@@ -145,6 +151,7 @@
 					
 				</div>
 				<div class="row">
+					<div class="left-sv">
 					<div class="sv-1">
 						<div class="icon">
 							<i class="fa-solid fa-palette"></i>
@@ -166,6 +173,8 @@
 						<h4>UI/UX Design</h4>
 						<p>Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.</p>
 					</div>
+				</div>
+				<div class="right-sv">
 					<div class="sv-4">
 						<div class="icon">
 							<i class="fa-solid fa-paintbrush"></i>
@@ -186,7 +195,8 @@
 						</div>
 						<h4>SEO Marketing</h4>
 						<p>Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.</p>
-					</div>	
+					</div>
+				</div>	
 				</div>
 			</div>
 			</div>
@@ -575,17 +585,18 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>	
 	<!-- <script src="filter.js"></script> -->
 	<script src="slider.js"></script>
+	<script src="typing.js" type="text/javascript"></script>
 	<script type="text/javascript" src="nav.js"></script>
 <script type="text/javascript" src="script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.0/typed.min.js"></script>
 <script type="text/javascript">
-	var typed = new Typed(".auto-type", {
-	strings:["a","Simone Olivia", "a Freelancer.", "a Photographar.", "a Designer." ],
-	typeSpeed: 150,
-	backSpeed: 150,
-	loop: true
-});
+// var typed = new Typed(".auto-type", {
+// 	strings:["a","Simone Olivia", "a Freelancer.", "a Photographar.", "a Designer." ],
+// 	typeSpeed: 150,
+// 	backSpeed: 150,
+// 	loop: true
+// });
 </script>
 </body>
 </html>

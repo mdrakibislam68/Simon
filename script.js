@@ -89,7 +89,7 @@ var counter4 = document.querySelector("#counter-4");
 
 let count4 =1;
 setInterval(() => {
-	if (count4 <= 249) {
+	if (count4 <= 37) {
 		count4++;
 		counter4.innerText = count4;
 	}
